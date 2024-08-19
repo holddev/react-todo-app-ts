@@ -1,0 +1,131 @@
+@import '../mixins';
+
+.Main.active {
+  visibility: visible;
+  display: block;
+}
+
+.Main {
+  visibility: hidden;
+  display: none;
+  width: 80%;
+  border-top: 1px solid #3178C6;
+
+  @include media(900px) {
+    min-width: 100%
+  }
+
+  &-ul {
+    @include flex(column, center, center);
+  }
+
+  &-li {
+    @include flex(row, center, space-between);
+    min-width: 100%;
+    padding: .6rem;
+    border-top: .2px solid #d4d8dc;
+  }
+
+  &-input {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      content: '';
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      border: 2px solid #9c9c9c;
+      background-color: #ffff;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #3178C6;
+      opacity: 0;
+      z-index: 2;
+      transition: opacity .3s ease;
+    }
+
+    &:checked::before {
+      opacity: 1;
+    }
+
+  }
+
+  &-input:checked~.Main-label {
+    text-decoration: line-through;
+    color: #a3a2a2;
+  }
+
+  &-label,
+  &-edit {
+    display: block;
+    text-align: start;
+    width: 80%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1em;
+    padding: .5rem 0;
+
+    @include media() {
+      font-size: 1em;
+    }
+  }
+
+  &-label {
+    word-wrap: break-word;
+    transition: color, text-decoration .3s ease;
+
+    @include media() {
+      padding: .5rem .3rem;
+    }
+
+  }
+
+  &-edit {
+    outline-color: #ef7d3f;
+  }
+
+  &-button {
+    border-radius: 50%;
+    @include flex(row, center, center);
+    cursor: pointer;
+    background-color: transparent;
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+
+  &-li:hover>&-button {
+    opacity: 1;
+  }
+
+  &-svg {
+    color: #9c9c9c;
+    width: 1.7rem;
+    height: 1.7rem;
+    transition: color .3s ease, filter .3s ease, transform .5s ease;
+  }
+
+  &-svg:hover {
+    color: #ff0808a4;
+    filter: drop-shadow(0 0 1px #ff0000);
+    transform: rotate(90deg);
+  }
+
+
+}

@@ -1,0 +1,86 @@
+@import '../mixins';
+
+.Footer {
+  width: 80%;
+  @include flex(row, center, space-between);
+  gap: 1rem;
+  padding: 1rem 0 .5rem;
+  border-top: 1px solid #3178C6;
+
+  @include media(900px) {
+    min-width: 100%
+  }
+
+  @include media() {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+  }
+
+  &-span {
+    font-size: 1em;
+
+    @include media() {
+      order: 1;
+    }
+  }
+
+  &-ul {
+    @include flex(row, center, center);
+    gap: 1rem;
+
+    @include media() {
+      order: 3;
+      grid-column: span 2;
+    }
+  }
+
+  &-li {
+    list-style-type: none;
+  }
+
+  &-button {
+    font-size: 1em;
+    padding: .25rem .5rem;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border-color .3s ease-in;
+
+  }
+
+  &-button--delete {
+    visibility: hidden;
+    pointer-events: none;
+    color: #fff;
+    background-color: #3178C6;
+    transform: scale(1);
+    transition: transform .3s ease;
+
+    @include media() {
+      order: 2;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  &-button--delete.active {
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  &-button:hover {
+    border-color: #59a4ff97;
+  }
+
+  &-button.active {
+    border-color: #59a4ff;
+  }
+}

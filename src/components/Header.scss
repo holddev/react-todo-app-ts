@@ -1,0 +1,30 @@
+@import '../mixins';
+
+.Header {
+  min-width: 80%;
+
+  @include media(900px) {
+    min-width: 100%;
+  }
+
+  &-input {
+    display: block;
+    text-align: start;
+    min-width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    padding: .5rem 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    outline: none;
+    transition: border-color .3s ease;
+
+    @include media() {
+      font-size: 1em;
+    }
+  }
+
+  &-input:focus {
+    border-color: #3178C6;
+  }
+}

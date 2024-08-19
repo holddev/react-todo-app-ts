@@ -1,0 +1,13 @@
+// mixins.scss
+@mixin flex($direction, $align: center, $justify: center) {
+  display: flex;
+  flex-flow: $direction nowrap;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin media($width: 590px) {
+  @media only screen and (max-width:$width) {
+    @content;
+  }
+}
