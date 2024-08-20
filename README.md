@@ -1,30 +1,49 @@
-# React + TypeScript + Vite
+# 🗒️ Todo App built with React and Typescript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es una Todo App intuitivo y sencillo, donde se permite realizar operaciones CRUD básicas y tener una lista de tareas almacenadas en el LocalStorage para mantener una lista de tareas organizadas.
 
-Currently, two official plugins are available:
+## Instalación y ejecución
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Puedes clonar el repositorio o descargar el archivo ZIP del proyecto.
 
-## Expanding the ESLint configuration
+1. **Clonar el repositorio:**
+  ```bash
+    git clone https://github.com/Usuario6842/react-todo-app-ts.git
+  ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. **Descargar el archivo ZIP:**
 
-- Configure the top-level `parserOptions` property like this:
+   [Descargar ZIP](https://github.com/Usuario6842/react-todo-app-ts/archive/refs/heads/main.zip)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+3. **Instalar dependencias:**
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   puedes navegar hasta la ruta "/" y ejecuta: 
+  ```bash
+    pnpm install
+  ```
+
+4. **Iniciar la aplicación:**
+
+   para iniciar la aplicación ejecuta el siguiente comando: 
+  ```bash
+    pnpm run start
+  ```
+
+5. **Ejecutar la aplicación en modo desarrollo:**
+
+   para iniciar la aplicación en el modo de desarrollo ejecuta el siguiente comando: 
+  ```bash
+    pnpm run dev
+  ```
+
+### Demostración
+<a href="https://todo-app-ts-beta.vercel.app" target="_blank"><strong>🚀Live Demo</strong></a>
+
+## Vista Previa
+<div align="center">
+  <img src="./src/assets/capture.webp" alt="captura del sitio de nuestro todo app" style="width: 60%; height: auto; object-fit:cover;"/>
+</div>
+
+### ¡Gracias por tu interés!
+
+¡Espero que lo disfrutes. Si tienes alguna duda o sugerencia, no dudes en contactarme. 💚💚💚
