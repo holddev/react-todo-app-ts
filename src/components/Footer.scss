@@ -1,11 +1,12 @@
 @import '../mixins';
+@import '../variables';
 
 .Footer {
   width: 80%;
   @include flex(row, center, space-between);
   gap: 1rem;
   padding: 1rem 0 .5rem;
-  border-top: 1px solid #3178C6;
+  border-top: 1px solid $color-primary;
 
   @include media(900px) {
     min-width: 100%
@@ -54,7 +55,7 @@
     visibility: hidden;
     pointer-events: none;
     color: #fff;
-    background-color: #3178C6;
+    background-color: $color-primary;
     transform: scale(1);
     transition: transform .3s ease;
 
@@ -77,10 +78,10 @@
   }
 
   &-button:hover {
-    border-color: #59a4ff97;
+    border-color: $color-border-hover;
   }
 
   &-button.active {
-    border-color: #59a4ff;
+    border-color: $color-border-active;
   }
 }

@@ -1,4 +1,5 @@
 @import '../mixins';
+@import '../variables';
 
 .Main.active {
   visibility: visible;
@@ -9,7 +10,7 @@
   visibility: hidden;
   display: none;
   width: 80%;
-  border-top: 1px solid #3178C6;
+  border-top: 1px solid $color-primary;
 
   @include media(900px) {
     min-width: 100%
@@ -23,7 +24,7 @@
     @include flex(row, center, space-between);
     min-width: 100%;
     padding: .6rem;
-    border-top: .2px solid #d4d8dc;
+    border-top: .2px solid $border-color-sec;
   }
 
   &-input {
@@ -38,7 +39,7 @@
       height: 20px;
       width: 20px;
       border-radius: 50%;
-      border: 2px solid #9c9c9c;
+      border: 2px solid $border-color-aft;
       background-color: #ffff;
       top: 50%;
       left: 50%;
@@ -56,7 +57,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: #3178C6;
+      background-color: $color-primary;
       opacity: 0;
       z-index: 2;
       transition: opacity .3s ease;
@@ -70,7 +71,7 @@
 
   &-input:checked~.Main-label {
     text-decoration: line-through;
-    color: #a3a2a2;
+    color: $color-gray;
   }
 
   &-label,
@@ -115,15 +116,15 @@
   }
 
   &-svg {
-    color: #9c9c9c;
+    color: $color-gray;
     width: 1.7rem;
     height: 1.7rem;
     transition: color .3s ease, filter .3s ease, transform .5s ease;
   }
 
   &-svg:hover {
-    color: #ff0808a4;
-    filter: drop-shadow(0 0 1px #ff0000);
+    color: $color-hover-x;
+    filter: drop-shadow(0 0 1px $color-h-shadow);
     transform: rotate(90deg);
   }
 

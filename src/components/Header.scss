@@ -1,4 +1,5 @@
 @import '../mixins';
+@import '../variables';
 
 .Header {
   min-width: 80%;
@@ -25,6 +26,6 @@
   }
 
   &-input:focus {
-    border-color: #3178C6;
+    border-color: $color-primary;
   }
 }
